@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease detection</title>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body class="bg-black" style="background-image: url('https://images.thequint.com/thequint%2F2024-03%2Fd2821084-5ba4-4b2f-bde3-d1305b2d79d2%2Fnephrologist_doctor_kidney_specialist_aesthetic_handdrawn_highlighted_illustration_of_human_jpg_s_10.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+    <div class="row">
+        <div  style="width:100%; height:100%; margin-top:50 px">
+            <div class="container">
+               <div class="text-light">
+                   <div class="card" style="text-align:center">
+                       <div style="background-color: rgb(150, 172, 218);">
+
+                       <h1 style="font-family: 'Times New Roman', Times, serif; color: blue;">Kidney Disease Detector</h1>
+                       </div>
+                   </div>
+
+    <div>
+        <form action="\predict" method="post">
+            <div class="row">
+
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">Age</h5>
+                            <input type="text" class="form-control" id="age" name="age" placeholder="Enter age">
+                        </div>
+                    
+                </div>
+            
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">BP</h5>
+                            <input type="text" class="form-control" id="bp" name="bp" placeholder="Enter bp Value">
+                        </div>
+                </div>
+            
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">Sg</h5>
+                            <input type="text" class="form-control" id="sg" name="sg" placeholder="Enter sg Value">
+                        </div>
+                </div>
+            
+                <div class="col-sm-3">
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">Al</h5>
+                            <input type="text" class="form-control" id="al" name="al" placeholder="Enter al Value">
+                        </div>
+                </div>
+            
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">Su</h5>
+                            <input type="text" class="form-control" id="su" name="su" placeholder="Enter su Value">
+                        </div>
+                    
+                </div>
+            
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">rbc</h5>
+                            <input type="text" class="form-control" id="rbc" name="rbc" placeholder="Enter rbc Value">
+                        </div>
+                    
+                </div>
+             
+            
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">Ba</h5>
+                            <input type="text" class="form-control" id="ba" name="ba" placeholder="Enter ba Value">
+                        </div>
+                    
+                </div>
+            
+            <div class="col-sm-3">
+                
+                    <div class="col-12" style="text-align:center">
+                        <h5 class="card-title">Bgr</h5>
+                        <input type="text" class="form-control" id="bgr" name="bgr" placeholder="Enter bgr Value">
+                    </div>
+                
+            </div> 
+            
+        
+            <div class="col-sm-3">
+                
+                    <div class="col-12" style="text-align:center">
+                        <h5 class="card-title">Bu</h5>
+                        <input type="text" class="form-control" id="bu" name="bu" placeholder="Enter bu Value">
+                    </div>
+                
+            </div>
+        
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">Sc</h5>
+                            <input type="text" class="form-control" id="sc" name="sc" placeholder="Enter sc Value">
+                        </div>
+                    
+                </div>
+            
+                <div class="col-sm-3">
+                    
+                        <div class="col-12" style="text-align:center">
+                            <h5 class="card-title">sod</h5>
+                            <input type="text" class="form-control" id="sod" name="sod" placeholder="Enter sod Value">
+                        </div>
+                    
+                </div> 
+            
+            <div class="col-sm-3">
+                
+                    <div class="col-12" style="text-align:center">
+                        <h5 class="card-title">hemo</h5>
+                        <input type="text" class="form-control" id="hemo" name="hemo" placeholder="Enter hemo Value">
+                    </div>
+                
+            </div>
+        
+        <div class="col-sm-3">
+            
+                <div class="col-12" style="text-align:center">
+                    <h5 class="card-title">pcv</h5>
+                    <input type="text" class="form-control" id="pcv" name="pcv" placeholder="Enter pcv Value">
+                </div>
+            
+        </div>
+    
+            <div class="col-sm-3">
+                
+                    <div class="col-12" style="text-align:center">
+                        <h5 class="card-title">wc</h5>
+                        <input type="text" class="form-control" id="wc" name="wc" placeholder="Enter wc Value">
+                    </div>
+                
+            </div>
+        
+    <div class="col-sm-3">
+        
+            <div class="col-12" style="text-align:center">
+                <h5 class="card-title">rc</h5>
+                <input type="text" class="form-control" id="rc" name="rc" placeholder="Enter rc Value">
+            </div>
+        
+    </div>
+        
+        <div class="col-sm-3">
+            
+                <div class="col-12" style="text-align:center">
+                    <h5 class="card-title">cad</h5>
+                    <input type="text" class="form-control" id="cad" name="cad" placeholder="Enter cad Value">
+                </div>
+            
+        </div>
+    
+    <div class="col-sm-3">
+        
+            <div class="col-12" style="text-align:center">
+                <h5 class="card-title">appet</h5>
+                <input type="text" class="form-control" id="appet" name="appet" placeholder="Enter appet Value">
+            </div>
+        
+    </div>
+
+<div class="col-sm-3">
+    
+        <div class="col-12" style="text-align:center">
+            <h5 class="card-title">pe</h5>
+            <input type="text" class="form-control" id="pe" name="pe" placeholder="Enter pe Value">
+        </div>
+    
+</div>
+
+<div class="col-sm-3">
+    
+        <div class="col-12" style="text-align:center">
+            <h5 class="card-title">ane</h5>
+            <input type="text" class="form-control" id="ane" name="ane" placeholder="Enter ane Value">
+        </div>
+    
+</div>
+       
+<div class="col-sm-3">
+    
+    <div class="col-12" style="text-align:center">
+        <br>
+        <input type="submit"class="btn btn-success" value="Submit">
+    </div>
+
+</div>       
+            </div>
+
+ <br><br>
+ <center>
+            <div class="row">
+                <div class="col-12" style="text-align:center">
+                    <div class="text-light" style="text-align: center;">
+                        <h3 style="color: blue;">{{ prediction_text }}</h3>
+                    </div>
+                </div>
+            </div></center>
+
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
